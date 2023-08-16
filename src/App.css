@@ -36,3 +36,80 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Centrado horizontal */
+  align-items: center;
+  min-height: 100vh; /* Centrado vertical */
+  /* height: 100vh;  */
+}
+
+/* Eliminamos los estilos por defecto de la lista */
+.horizontal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Centramos los elementos en el contenedor */
+}
+
+/* Mostramos los elementos en línea y les damos espaciado */
+.horizontal-list li {
+  display: inline-block;
+  margin-right: 10px; /* Espacio entre elementos */
+}
+
+/* Eliminamos el margen derecho del último elemento para evitar exceso de espaciado */
+.horizontal-list li:last-child {
+  margin-right: 0;
+}
+
+.cuadro{
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  /* -webkit-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.4);
+  -moz-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.4); */
+  box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.4);
+  border-radius: 10%;
+  width: 280px;
+  height: 330PX;
+}
+
+.logoEquipo{
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
+}
+
+.cuadroFactor.btn{
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  /* -webkit-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.4);
+  -moz-box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.4); */
+  box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.4);
+  color: black;
+  border-radius: 20px;
+  width: 180px;
+  height: 90PX;
+  border-width: 0;
+}
+
+.cuadro.login{
+  width: 350px;
+  height: 450PX;
+}
+
+.cuadroLogin{
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column; /* Centrado horizontal */
+  /* align-items: center; */
+}
