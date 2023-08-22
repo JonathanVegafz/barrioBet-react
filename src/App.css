@@ -113,3 +113,13 @@
   flex-direction: column; /* Centrado horizontal */
   /* align-items: center; */
 }
+
+.containerTable{
+  display: flex;
+  justify-content: center;
+  flex-direction: row; /* Centrado horizontal */
+  /* align-items: center; */
+  /* min-height: 100vh; */
+
+  min-height: 5vh;
+}

@@ -28,6 +28,7 @@ export const FormularioApuesta = ({direction, estado, factor, abrirModal=()=>{},
         abrirModal();
         setApuesta('Seleccionar apuesta');
     }
+    
 
     return(
         <Modal isOpen={estado} style={modalStyles}>

@@ -25,6 +25,9 @@ import {Home} from './Home';
 import { AdminHome } from './Admin/adminHome';
 import { AdminLogin } from './Admin/adminLogin';
 import { PrivateRoute } from './privateRoute';
+import AdminPartido from './Admin/adminPartido';
+import AdminEquipo from './Admin/adminEquipo';
+import AdminApuestas from './Admin/adminApuestas';
 
 function App({ direction, ...args }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -55,9 +58,10 @@ function App({ direction, ...args }) {
             <Route path='admin'>
               <Route index element={<AdminLogin></AdminLogin>}></Route>
               <Route path='home' element={<PrivateRoute><AdminHome></AdminHome></PrivateRoute>}></Route>
-              <Route path='equipo' element={<PrivateRoute><h1>Equipo</h1></PrivateRoute>}></Route>
-              <Route path='partido' element={<PrivateRoute><h1>Partido</h1></PrivateRoute>}></Route>
-              <Route path='apuesta' element={<PrivateRoute><h1>Apuesta</h1></PrivateRoute>}></Route>
+              {/* <Route path='equipo' element={<PrivateRoute><AdminEquipo></AdminEquipo></PrivateRoute>}></Route> */}
+              <Route path='equipo' element={<PrivateRoute><AdminEquipo></AdminEquipo></PrivateRoute>}></Route>
+              <Route path='partido' element={<PrivateRoute><AdminPartido></AdminPartido></PrivateRoute>}></Route>
+              <Route path='apuesta' element={<PrivateRoute><AdminApuestas></AdminApuestas></PrivateRoute>}></Route>
             </Route>
           </Route>
           <Route path='*' element={<h1>404 Not Found</h1>}></Route>

@@ -1,18 +1,76 @@
 import React from "react";
 import './menu.css'
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 export const Menu = () =>{
-    const [ menu , setMenu ] = useState( false )
+    const [ menu , setMenu ] = useState( false );
+    const navigate = useNavigate();
 
     const toggleMenu = () => {
         setMenu( !menu )
     }
+
+    const handleActiveHome = (e)=>{
+        e.preventDefault();
+        navigate('/admin/home', {
+            replace: true,
+            state: {
+                logged: true,
+            },
+        });
+        return;
+    }
+
+    const handleActiveApuesta = (e)=>{
+        e.preventDefault();
+        navigate('/admin/apuesta', {
+            replace: true,
+            state: {
+                logged: true,
+            },
+        });
+        return;
+    }
+
+    const handleActivePartido = (e)=>{
+        e.preventDefault();
+        navigate('/admin/partido', {
+            replace: true,
+            state: {
+                logged: true,
+            },
+        });
+        return;
+    }
+
+    const handleActiveEquipo = (e)=>{
+        e.preventDefault();
+        navigate('/admin/equipo', {
+            replace: true,
+            state: {
+                logged: true,
+            },
+        });
+        return;
+    }
+
+    const handleDesactiveSalir = (e)=>{
+        e.preventDefault();
+        navigate('/admin/home', {
+            replace: true,
+            state: {
+                logged: false,
+            },
+        });
+        return;
+    }
+
     return(
         <header className="Cabecera">
             <h1 className="Cabecera-h1">
-                <NavLink to='/admin/home' className="Cabecera-a">BarrioBet</NavLink>
+                <NavLink to='/admin/home' className="Cabecera-a" onClick={handleActiveHome}>BarrioBet</NavLink>
             </h1>
             <button 
                 onClick={ toggleMenu }
@@ -24,9 +82,10 @@ export const Menu = () =>{
 
             <nav className={ `Cabecera-nav ${ menu ? 'isActive' : '' }` }>
                 <ul className="Cabecera-ul">
-                    <li><NavLink to='/admin/equipo' className="Cabecera-li">Equipo</NavLink></li>
-                    <li><NavLink to='/admin/apuesta' className="Cabecera-li">Apuesta</NavLink></li>
-                    <li><NavLink to='/admin/partido' className="Cabecera-li">Partido</NavLink></li>
+                    <li><NavLink to='/admin/equipo' className="Cabecera-li" onClick={handleActiveEquipo}>Equipo</NavLink></li>
+                    <li><NavLink to='/admin/apuesta' className="Cabecera-li" onClick={handleActiveApuesta}>Apuesta</NavLink></li>
+                    <li><NavLink to='/admin/partido' className="Cabecera-li" onClick={handleActivePartido}>Partido</NavLink></li>
+                    <li><NavLink to='/admin' className="Cabecera-li" style={{color:'red'}} onClick={handleDesactiveSalir}>Salir</NavLink></li>
                 </ul>
             </nav>
 

@@ -11,7 +11,11 @@
     color:white;
 }
 .Cabecera-h1{}
-.Cabecera-a{}
+.Cabecera-a{
+    text-decoration: none;
+    color: aliceblue;
+
+}
 .Cabecera-button{
     display:none;
     cursor: pointer;

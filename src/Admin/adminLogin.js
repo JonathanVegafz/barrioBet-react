@@ -21,7 +21,7 @@ export const AdminLogin = () =>{
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     const handleLogin = (e)=>{
-        if(name == '' && password == ''){
+        if(name == 'nico.pucv' && password == 'nico.2023'){
             e.preventDefault();
             navigate('/admin/home', {
                 replace: true,
